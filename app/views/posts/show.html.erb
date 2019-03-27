@@ -13,21 +13,6 @@ Categories: <br>
 
 Comments: <br>
 
-<% #ability to add a comment %>
-<%= form_for @post.comments do |f| %>
-  <%= f.text_area :comment %>
-  <br>
-  <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New" %>
-  <br>
-  <%= f.fields_for :user_attributes, @comment.user do |user_fields| %>
-    <%= user_fields.label :username %>
-    <%= user_fields.text_field :username %>
-    <% end %>
-    <br>
-  <%= f.hidden_field :post_id, value: @post.id %>
-  <%= f.submit :content, value: "Create Comment" %>
-  <% end %>
-  <br>
 
 
 <ul>
