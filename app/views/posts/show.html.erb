@@ -24,7 +24,7 @@ Comments: <br>
     <%= user_fields.text_field :username %>
     <% end %>
     <br>
-  <%= f.hidden_field :post_id, value @post.id %>
+  <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.submit :content, value: "Create Comment" %>
   <% end %>
   <br>
