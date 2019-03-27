@@ -14,7 +14,7 @@ Categories: <br>
 Comments: <br>
 
 <% #ability to add a comment %>
-<%= form_for @post.comment do |f| %>
+<%= form_for @post.comments do |f| %>
   <%= f.text_area :comment %>
   <br>
   <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New" %>
