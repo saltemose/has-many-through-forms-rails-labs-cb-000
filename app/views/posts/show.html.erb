@@ -15,7 +15,7 @@ Comments: <br>
 
 <% #ability to add a comment %>
 <%= form_for @comment do |f| %>
-  <%= f.text_area :comment %>
+  <%= f.text_area :content %>
   <br>
   <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New" %>
   <br>
